@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+        "lib": [
+            "dom",
+            "dom.iterable",
+            "es5",
+            "ES2015",
+            "esnext"
+        ],
+        "target": "es5",
+        "jsx": "react",
+        "sourceMap": true,
+        "allowJs": true,
+        "noImplicitAny": true,
+        "esModuleInterop": true,
+        "baseUrl": "./src",
+        "downlevelIteration": true,
+        "outDir": "dist",
+        "types": ["jest", "node"]
+    },
+    "include": [
+        "src"
+    ],
+}

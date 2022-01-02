@@ -1,0 +1,166 @@
+body {
+    font-size: 15px;
+    margin: 0;
+    min-height: 356px;
+    font-family: -apple-system,Helvetica,sans-serif;
+    -webkit-user-select: text;
+    color: #444;
+    background-color: #fff;
+}
+
+#dic_banner {
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    background-position: top;
+    position: relative;
+}
+
+.explain_wrap ul, .explain_wrap li, .explain_wrap ol {
+    margin-left: 15px;
+    padding-left: 0;
+}
+
+.explain_wrap .exp ul li {
+    padding-top:2px
+}
+
+.explain_wrap .syno {
+    color:red
+}
+
+.explain_wrap .eg {
+    color:#238e68
+}
+
+.ios_statusbar {
+    padding-top: calc(10px + constant(safe-area-inset-top));
+    padding-top: calc(10px + env(safe-area-inset-top));
+
+    padding-left: constant(safe-area-inset-left);
+    padding-left: env(safe-area-inset-left);
+
+    padding-right: constant(safe-area-inset-right);
+    padding-right: env(safe-area-inset-right);
+}
+
+#leftBtn {
+    display: inline-flex;
+    margin-left: 20px;
+    margin-right: 60px;
+    position: relative;
+    line-height: 26px;
+}
+
+.eudic_head_sentence, .dicHeadWord {
+    display: flex;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: Helvetica;
+    padding: 0;
+    width: auto;
+    line-height: auto;
+    vertical-align: middle;
+    background-color: transparent!important;
+    word-wrap: break-word;
+    overflow: hidden;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+
+#expBody {
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    padding: 0;
+    display: block;
+    margin-bottom: 60px;
+}
+
+.explain_wrap {
+    line-height: 1.5em;
+    clear: both;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    padding-left: constant(safe-area-inset-left);
+    padding-left: env(safe-area-inset-left);
+    padding-right: constant(safe-area-inset-right);
+    padding-right: env(safe-area-inset-right);
+}
+
+.expHead button {
+    display: inline-block;
+    float: none;
+    padding: 0;
+    margin: 0 20px 0 20px;
+    line-height: 20px;
+    border: 0;
+    outline: 0;
+    overflow: hidden;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 700;
+    height: 100%;
+    background: 0 0;
+}
+
+.explain_wrap .expHead, .explain_wrap_styleless .expHead {
+    height: 50px;
+    position: relative;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+}
+
+.expDiv {
+    padding: 16px 20px 16px 20px;
+}
+
+.explain_wrap h1 {
+    font-weight: 700;
+    font-size: 110%;
+    margin: 10px 0 10px 0;
+}
+
+body.sepia {
+	background: #f5efdc;
+	color: #3d3c37;
+	line-height: 1.6em;
+}
+
+body.sepia .explain_wrap .expHead, body.sepia .explain_wrap_styleless .expHead {
+    background-color: #e9e2d5;
+    border-bottom: 0.5px solid #d9d1c4;
+}
+
+body.black .explain_wrap .expHead,
+body.black .explain_wrap_styleless .expHead {
+  background-color: #1a1a1a;
+  border-bottom: 0.5px solid #2e2e2e;
+}
+
+body.night .explain_wrap .expHead,
+body.night .explain_wrap_styleless .expHead {
+  background-color: #242424;
+  border-bottom: 0.5px solid #303030;
+}
+
+body.pink {
+    background: #FAAECF;
+}
+
+body.night {
+	background: #2B2F32;
+	color: #9C9C9C;
+}
+
+body.green {
+	background: #c7edcc;
+}
+
+body.black {
+	background: #000000;
+	color: #E6E6E6;
+}

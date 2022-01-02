@@ -1,0 +1,314 @@
+.dictLongman-Wordfams {
+  .asset_intro {
+    display: block;
+    font-weight: bold;
+  }
+
+  .pos {
+    color: #16a085;
+    font-weight: bold;
+
+    &::before {
+      content: '';
+      display: block;
+      border-left: 1px solid red;
+    }
+
+    & + * {
+      margin-left: 0.5em;
+    }
+  }
+}
+
+.dictLongman-Dict {
+  margin-bottom: 1.2em;
+}
+
+.dictLongman-DictTitle {
+  font-size: 14px;
+  font-weight: normal;
+  text-align: center;
+
+  > span {
+    padding: 5px 10px;
+    color: #fff;
+    background: #b8b8b8;
+    border-radius: 4px;
+  }
+}
+
+.dictLongman-HeaderContainer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.dictLongman-Title,
+.dictLongman-Level {
+  font-size: 1em;
+  margin-right: 0.6em;
+}
+
+.dictLongman-Title_HYPHENATION {
+  font-size: 1.5em;
+}
+
+.dictLongman-Title_HWD {
+  display: none;
+}
+
+.dictLongman-Title_HOMNUM {
+  font-size: 0.5em;
+  vertical-align: super;
+}
+
+.dictLongman-FREQ {
+  margin-right: 0.6em;
+  padding: 1px 0.5em 0;
+  color: var(--color-theme);
+  line-height: 1.5;
+  vertical-align: middle;
+  border: 1px solid var(--color-theme);
+  border-radius: 3px;
+  user-select: none;
+}
+
+.dictLongman-Phsym {
+  margin: 0 0.5em;
+}
+
+.dictLongman-Sense {
+  position: relative;
+  padding-left: 1.4em;
+}
+
+.dictLongman-Entry {
+  font-family: arial, helvetica, sans-serif;
+
+  .SubEntry,
+  .EXAMPLE,
+  .Sense,
+  .newline,
+  .ColloExa,
+  .GramExa {
+    display: block;
+  }
+
+  .ACTIV,
+  .HWD,
+  .FIELD,
+  .FIELDXX {
+    display: none;
+  }
+
+  .HYPHENATION {
+    font-size: 160%;
+  }
+
+  .POS,
+  .SYN,
+  .sensenum,
+  .GRAM,
+  .EXPR,
+  .LEXUNIT,
+  .COLLOINEXA,
+  .HYPHENATION,
+  .PROPFORMPREP {
+    font-weight: bold;
+  }
+
+  .GEO {
+    font-weight: normal;
+  }
+
+  .COLLOINEXA,
+  .GEO {
+    font-style: italic;
+  }
+
+  .GRAM {
+    margin-right: 0.25em;
+    color: #16a085;
+  }
+
+  .GEO,
+  .GLOSS {
+    color: #999;
+  }
+
+  .sensenum {
+    position: absolute;
+    left: 0;
+    text-align: right;
+    width: 1em;
+  }
+
+  .Subsense {
+    display: block;
+    padding-left: 1.4em;
+    position: relative;
+  }
+
+  .EXAMPLE {
+    margin-bottom: 0.4em;
+    padding-left: 0.8em;
+    color: var(--color-font-grey);
+    position: relative;
+
+    &:before {
+      content: '•';
+      margin-right: 0.5em;
+      user-select: none;
+    }
+
+    &.withSpeaker:before {
+      display: none;
+    }
+  }
+
+  .SYN .synopp,
+  .SIGNPOST {
+    color: #fff;
+    font-size: 80%;
+    font-weight: bold;
+    background: #ff9552;
+    padding: 2px 0.4em 1px;
+    border-radius: 3px;
+    text-transform: uppercase;
+  }
+
+  .OPP {
+    font-weight: bold;
+
+    .synopp {
+      color: #fff;
+      border-color: #f1d600;
+      background-color: #f1d600;
+      padding: 0 0.4em;
+      border-radius: 3px;
+      text-transform: uppercase;
+    }
+  }
+
+  a:link,
+  a:visited,
+  a:hover,
+  a:active {
+    text-decoration: none;
+    color: var(--color-theme);
+  }
+
+  .SubEntry {
+    color: #999;
+    margin-left: 0.8em;
+
+    &:last-child {
+      margin-bottom: 0.4em;
+    }
+
+    a:link,
+    a:visited,
+    a:hover,
+    a:active {
+      text-decoration: none;
+      color: #999;
+    }
+  }
+
+  .ldoceEntry .synopp,
+  .ldoceEntry .FREQ,
+  .ldoceEntry .AC {
+    display: inline-block;
+    font-style: normal;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+    border: solid 1px;
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+
+  .COLLO {
+    font-weight: bold;
+    margin-left: 10px;
+  }
+
+  .neutral {
+    color: var(--color-font-grey);
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    background: none;
+  }
+}
+
+.dictLongman-Box {
+  position: relative;
+  margin: 1.4em 0.8em 0.6em 0.4em;
+  padding: 0.8em 0.5em 0.5em;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 3px;
+
+  .heading {
+    position: absolute;
+    top: 0;
+    left: 0.8em;
+    transform: translateY(-50%);
+    padding: 0 0.4em;
+    font-size: 1.3em;
+    background: var(--color-background);
+  }
+
+  .CROSS,
+  .dont_say,
+  .BADEXA {
+    color: var(--color-theme);
+  }
+
+  .CROSS {
+    padding-left: 0.4em;
+
+    .neutral {
+      color: var(--color-theme);
+    }
+  }
+
+  .BADEXA {
+    padding-right: 0.4em;
+  }
+}
+
+.dictLongman-Examples_Title {
+  font-weight: normal;
+  font-size: 1.3em;
+}
+
+.dictLongman-Examples {
+  margin-bottom: 0.6em;
+
+  .title {
+    display: block;
+    font-weight: bold;
+    font-size: 1.1em;
+  }
+
+  .exa {
+    display: block;
+    position: relative;
+    margin-left: 0.8em;
+    padding-left: 0.8em;
+  }
+
+  .neutral {
+    position: absolute;
+    left: 0;
+  }
+}
+
+.dictLongman-Related {
+  a {
+    margin-left: 2em;
+    color: #16a085;
+  }
+}

@@ -1,0 +1,12 @@
+{
+    "manifest_version": 1,
+    "name": "句酷中英双向双语例句",
+    "desc": "句酷中英双向双语例句",
+    "module": {
+        "name": "JukuuZh2EnPlugin"
+    },
+    "version": 20211028,
+    "author": "www.jukuu.com",
+    "libid": 20614,
+    "enabled": false
+}

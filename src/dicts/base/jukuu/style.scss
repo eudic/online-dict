@@ -1,0 +1,26 @@
+.dictJukuu-Sens {
+  padding-left: 20px;
+
+  b {
+    color: var(--color-theme);
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+.dictJukuu-Sen {
+  list-style-type: disc;
+  margin: 0.5em 0;
+}
+
+.dictJukuu-Ori {
+  color: olive;
+}
+
+.dictJukuu-Src {
+  font-size: 0.9em;
+  text-align: left;
+  color: #777;
+}

@@ -1,0 +1,4 @@
+node_modules
+test/dicts/**/response
+dist
+dicts_test_result.json

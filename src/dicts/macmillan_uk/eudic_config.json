@@ -1,0 +1,12 @@
+{
+    "manifest_version": 1,
+    "name": "麦克米伦英式英语词典",
+    "desc": "麦克米伦英式英语词典",
+    "module": {
+        "name": "MacmillanUkPlugin"
+    },
+    "version": 20211028,
+    "author": "www.macmillandictionary.com",
+    "libid": 20617,
+    "enabled": true
+}

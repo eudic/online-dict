@@ -1,0 +1,48 @@
+$speaker-duration: 1s !default;
+
+.eudic-onlinedict-Speaker {
+  display: inline-block;
+  width: 1.1em;
+  height: 1.1em;
+  text-decoration: none;
+  margin: 0 5px;
+  padding: 0;
+  line-height: 1;
+  vertical-align: text-bottom;
+  border: none;
+  background-color: var(--color-font-grey);
+  -webkit-mask-image: url('../../assets/Speaker.svg');
+  mask-image: url('../../assets/Speaker.svg');
+
+  -webkit-mask-size: 95% 95%;
+  mask-size: 95% 95%;
+
+  mask-position: bottom;
+  -webkit-mask-position: bottom;
+
+  user-select: none;
+  cursor: pointer;
+  &:hover {
+    outline: none;
+  }
+}
+
+.eudic-onlinedict-Speaker.isActive {
+  animation: eudic-onlinedict-Speaker-playing $speaker-duration steps(6) infinite;
+}
+
+.eudic-onlinedict-Speaker:hover {
+  background-color: var(--color-font);
+}
+
+@keyframes eudic-onlinedict-Speaker-playing {
+  from {
+    background-position-x: 0;
+  }
+  70% {
+    background-position-x: 100%;
+  }
+  100% {
+    background-position-x: 100%;
+  }
+}

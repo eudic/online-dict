@@ -1,0 +1,12 @@
+{
+    "manifest_version": 1,
+    "name": "Etymonline在线词典",
+    "desc": "Etymonline在线词典",
+    "module": {
+        "name": "EtymonlinePlugin"
+    },
+    "version": 20211028,
+    "author": "www.etymonline.com",
+    "libid": 20610,
+    "enabled": true
+}

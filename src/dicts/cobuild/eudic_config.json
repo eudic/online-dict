@@ -1,0 +1,12 @@
+{
+    "manifest_version": 1,
+    "name": "柯林斯高阶在线词典",
+    "desc": "柯林斯高阶在线词典",
+    "module": {
+        "name": "CobuildPlugin"
+    },
+    "version": 20211028,
+    "author": "www.collinsdictionary.com",
+    "libid": 20609,
+    "enabled": false
+}

@@ -1,0 +1,12 @@
+{
+    "manifest_version": 1,
+    "name": "韦氏词典",
+    "desc": "韦氏词典",
+    "module": {
+        "name": "WebsterlearnerPlugin"
+    },
+    "version": 20211028,
+    "author": "www.learnersdictionary.com",
+    "libid": 20619,
+    "enabled": true
+}
