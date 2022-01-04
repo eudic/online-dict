@@ -19,8 +19,8 @@ export function generateConfigSettings(baseDir: string, entryObject:any, copyCfg
         }
         entryObject[`${pluginName}/index`] = entryItem
 
-        const cfgFilePath = path.join(baseDir, `../src/dicts/${pluginName}/eudic_config.json`)
-        const cfgFileList = glob.sync(cfgFilePath)
+        const cfgFilePath = path.join(baseDir, `../src/dicts/${pluginName}/*.json`)
+        const cfgFileList = glob.sync(cfgFilePath, { nocase: true })
 
         if (cfgFileList.length > 0) {
             copyCfgList.push({
