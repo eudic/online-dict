@@ -20,8 +20,7 @@ export function generateConfigSettings(baseDir: string, entryObject:any, copyCfg
         entryObject[`${pluginName}/index`] = entryItem
 
         const cfgFilePath = path.join(baseDir, `../src/dicts/${pluginName}/*.json`)
-        const cfgFileList = glob.sync(cfgFilePath, { nocase: true })
-
+        const cfgFileList = glob.sync(cfgFilePath)
         if (cfgFileList.length > 0) {
             copyCfgList.push({
                 from: cfgFilePath,
