@@ -12,5 +12,5 @@ if (fs.pathExistsSync(distPath)) {
 
 const entryObject: any = {}
 const copyCfgList: any[] = []
-generateConfigSettings(__dirname, entryObject, copyCfgList)
-module.exports = mainConfig(__dirname, __dirname, entryObject, copyCfgList, isAnalyze)
+generateConfigSettings(__dirname, distPath, entryObject, copyCfgList)
+module.exports = mainConfig(__dirname, distPath, entryObject, copyCfgList, isAnalyze)

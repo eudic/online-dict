@@ -6,7 +6,7 @@ import CopyWebpackPlugin from 'copy-webpack-plugin'
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
-export function generateConfigSettings(baseDir: string, entryObject:any, copyCfgList: any[]) {
+export function generateConfigSettings(baseDir: string, outputDir: string, entryObject:any, copyCfgList: any[]) {
     const entryPathList = glob.sync(path.join(baseDir, '../src/dicts/**/index.ts'))
     //词库插件打包
     for (const entryItem of entryPathList) {
@@ -24,7 +24,7 @@ export function generateConfigSettings(baseDir: string, entryObject:any, copyCfg
         if (cfgFileList.length > 0) {
             copyCfgList.push({
                 from: cfgFilePath,
-                to: path.resolve(baseDir, `../dist/${pluginName}/[name].[ext]`),
+                to: path.resolve(outputDir, `./${pluginName}/[name].[ext]`),
             })
         }
 
@@ -32,7 +32,7 @@ export function generateConfigSettings(baseDir: string, entryObject:any, copyCfg
         if (fs.existsSync(dictJsPath)) {
             copyCfgList.push({
                 from: dictJsPath,
-                to: path.resolve(baseDir, `../dist/${pluginName}/[name].[ext]`),
+                to: path.resolve(outputDir, `./${pluginName}/[name].[ext]`),
             })
         } else {
             //可能dict.js在base里
@@ -42,7 +42,7 @@ export function generateConfigSettings(baseDir: string, entryObject:any, copyCfg
                 if (fs.existsSync(baseDictJs)) {
                     copyCfgList.push({
                         from: baseDictJs,
-                        to: path.resolve(baseDir, `../dist/${pluginName}/[name].[ext]`),
+                        to: path.resolve(outputDir, `./${pluginName}/[name].[ext]`),
                     })
                 }
             }
@@ -50,7 +50,7 @@ export function generateConfigSettings(baseDir: string, entryObject:any, copyCfg
     }
 }
 
-export function mainConfig(baseDir: string, publicDir: string, entryObject:any, copyCfgList: string[], isAnalyze: boolean): webpack.Configuration  {
+export function mainConfig(publicDir: string, outputDir: string, entryObject:any, copyCfgList: string[], isAnalyze: boolean): webpack.Configuration  {
     const config: webpack.Configuration = {
         mode: process.env.NODE_ENV === 'development' ? 'development' : 'production',
         entry: entryObject,
@@ -68,7 +68,7 @@ export function mainConfig(baseDir: string, publicDir: string, entryObject:any, 
         output: {
             filename: '[name].js',
             libraryTarget: 'window',
-            path: path.resolve(baseDir, '../dist'),
+            path: outputDir,
         },
         module: {
             rules: [
