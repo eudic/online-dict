@@ -4,6 +4,7 @@ export interface IDictResult {
     exp: string
     srclang?: string
     destlang?: string
+    errMsg?: string
 }
 
 export const DictNoResult: IDictResult = { uuid: '-1', word: '', exp: '' }
