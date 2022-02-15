@@ -6,7 +6,7 @@
     "scripts": {
       "storybook": "start-storybook -p 6066 -s ./test -c ./.storybook",
       "dev": "gulp && cross-env NODE_ENV='development' webpack --config ./.webpack/index.ts",
-      "build": "yarn test; yarn buildonly",
+      "build": "yarn test && yarn buildonly",
       "buildonly": "gulp && cross-env NODE_ENV='production' webpack --config ./.webpack/index.ts",
       "fixtures": "ts-node test/fixtures.ts",
       "analyze": "cross-env NODE_ENV='production' webpack --analyze --config ./.webpack/index.ts",
