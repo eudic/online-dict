@@ -4,7 +4,7 @@
     "license": "MIT",
     "engines": { "node": ">=14" },
     "scripts": {
-      "storybook": "start-storybook -p 6066 -s ./test -c ./.storybook",
+      "storybook": "start-storybook -p 6066 -s ./test -c ./.storybook --no-manager-cache",
       "dev": "gulp && cross-env NODE_ENV='development' webpack --config ./.webpack/index.ts",
       "build": "yarn test && yarn buildonly",
       "buildonly": "gulp && cross-env NODE_ENV='production' webpack --config ./.webpack/index.ts",
