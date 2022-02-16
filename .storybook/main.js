@@ -14,7 +14,7 @@ module.exports = {
       },
     },
   ],
-  stories: [path.join(__dirname, '../src/dicts/dicts.stories.tsx')],
+  stories: [path.join(__dirname, '../src/dicts/dicts.stories.tsx').replace(/\\/g, '/')],
   webpackFinal: async (config, { configType }) => {
     config.module.rules.push({
       test: /\.s[ac]ss$/i,
